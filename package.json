@@ -1,0 +1,33 @@
+{
+  "name": "croissant-loye-dev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "docker:build": "export $(cat .env | xargs) && docker build --build-arg PLAUSIBLE_URL --build-arg PLAUSIBLE_DOMAIN -t croissant-loye-dev ."
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.7.1",
+    "nuxt": "^4.4.5",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.7"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.108",
+    "@iconify-json/simple-icons": "^1.2.82",
+    "@iconify-json/tabler": "^1.2.35",
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxtjs/plausible": "^3.0.2",
+    "@types/node": "^25.8.0",
+    "eslint": "^10.3.0",
+    "prettier": "^3.8.3"
+  }
+}
