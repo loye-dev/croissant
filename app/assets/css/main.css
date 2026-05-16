@@ -1,3 +1,37 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+@theme {
+  --color-neutral-50: oklch(98.5% 0 0);
+  --color-neutral-100: oklch(97% 0 0);
+  --color-neutral-200: oklch(92.2% 0 0);
+  --color-neutral-300: oklch(87% 0 0);
+  --color-neutral-400: oklch(70.8% 0 0);
+  --color-neutral-500: oklch(55.6% 0 0);
+  --color-neutral-600: oklch(43.9% 0 0);
+  --color-neutral-700: oklch(37.1% 0 0);
+  --color-neutral-800: oklch(26.9% 0 0);
+  --color-neutral-900: oklch(20.5% 0 0);
+  --color-neutral-950: oklch(14.5% 0 0);
+}
+
+:root {
+  --ui-bg: #ff0000;
+  --ui-bg-muted: #ffffff0f;
+  --ui-bg-elevated: #ffffff1a;
+  --ui-bg-accented: #ffffff26;
+  --ui-bg-inverted: #ffffff;
+  --ui-text: #ffffff;
+  --ui-text-muted: #ffffffb3;
+  --ui-text-dimmed: #ffffff80;
+  --ui-text-highlighted: #ffffff;
+  --ui-text-inverted: #ff0000;
+  --ui-primary: #ffffff;
+  --ui-border: #ffffff26;
+  --ui-border-muted: #ffffff1a;
+  --ui-border-accented: #ffffff33;
+}
+
+html {
+  background-color: var(--ui-bg);
+}
