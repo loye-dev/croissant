@@ -22,7 +22,6 @@ export default defineNuxtConfig({
     apiHost: process.env.PLAUSIBLE_URL || '',
     domain: process.env.PLAUSIBLE_DOMAIN || '',
     autoOutboundTracking: true,
-    autoPageviews: false, // géré manuellement (middleware/analytics.global.ts)
   },
   css: ['~/assets/css/main.css'],
 })
