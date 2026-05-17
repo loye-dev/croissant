@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen w-full bg-[#ff0000] text-white flex items-center justify-center cursor-default overflow-hidden"
+    class="min-h-screen w-full bg-[#ff0000] text-white flex items-center justify-center cursor-default overflow-y-auto sm:overflow-hidden"
     @click.self="onFirstClick"
   >
     <!-- <CroissantFloating /> -->
@@ -79,10 +79,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-html,
-body {
-  overflow: hidden;
-}
 
 .page-content {
   animation: pageEnter 0.8s ease-out;

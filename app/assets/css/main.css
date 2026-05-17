@@ -35,3 +35,10 @@
 html {
   background-color: var(--ui-bg);
 }
+
+@media (min-width: 640px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}

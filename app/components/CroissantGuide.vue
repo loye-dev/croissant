@@ -1,9 +1,10 @@
 <template>
   <div class="mb-8">
-    <USeparator size="sm" class="mb-8" />
+    <USeparator icon="lucide:croissant" size="sm" class="mb-8 sm:hidden" :ui="{ icon: 'text-white/30' }" />
+    <USeparator size="sm" class="mb-8 hidden sm:flex" />
     <div class="flex items-start gap-5 flex-col sm:flex-row">
       <div
-        class="w-24 h-24 shrink-0 bg-white rounded flex items-center justify-center"
+        class="hidden sm:flex w-24 h-24 shrink-0 bg-white rounded items-center justify-center"
         aria-hidden="true"
       >
         <UIcon name="lucide:croissant" class="croissant-bounce size-12 text-[#ff0000]" />
