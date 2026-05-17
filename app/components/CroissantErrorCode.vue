@@ -3,8 +3,8 @@
     <p class="text-xs text-white/40 font-mono tracking-wide">
       INCIDENT :&nbsp;&nbsp;{{ formattedDate }}
     </p>
-      STOP CODE :&nbsp; CROISSANT_NOT_LOCKED_EXCEPTION (0xC0FFEE42)
     <p class="text-xs text-white/40 font-mono tracking-wide">
+      STOP CODE :&nbsp; CROISSANT_NOT_LOCKED_EXCEPTION (0xCR01554NT)
     </p>
   </div>
 </template>
