@@ -3,7 +3,7 @@
     <UButton
       icon="tabler:share"
       variant="ghost"
-      class="text-white/40 hover:text-white hover:bg-white/10"
+      class="text-white/40 hover:text-white hover:bg-white/10 cursor-pointer"
     />
     <template #content>
       <div class="p-3 space-y-2 min-w-56 bg-[#aa0000]/90 backdrop-blur-md rounded-lg">
@@ -17,7 +17,7 @@
                 icon="tabler:copy"
                 variant="ghost"
                 size="xs"
-                class="text-white/50 hover:text-white absolute"
+                class="text-white/50 hover:text-white absolute cursor-pointer"
                 @click="copy(link.url)"
               />
               <UButton
@@ -26,7 +26,7 @@
                 icon="tabler:check"
                 variant="ghost"
                 size="xs"
-                class="text-green-400 absolute"
+                class="text-green-400 absolute cursor-pointer"
               />
             </Transition>
           </div>

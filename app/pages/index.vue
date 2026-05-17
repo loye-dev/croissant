@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen w-full bg-[#ff0000] text-white flex items-center justify-center cursor-default overflow-y-auto sm:overflow-hidden"
+    class="min-h-screen w-full bg-[#ff0000] text-white flex items-center justify-center cursor-default sm:overflow-hidden"
     @click.self="onFirstClick"
   >
     <div class="page-content max-w-3xl w-full px-6 py-10 sm:px-10 relative z-10">
@@ -12,12 +12,12 @@
     </div>
 
     <Transition name="fade">
-      <div v-if="!isFullscreen" class="fixed top-4 right-4 flex items-center gap-1">
+      <div v-if="!isFullscreen" class="fixed top-4 right-4 z-50 flex items-center gap-1">
         <CroissantShare />
         <UButton
           icon="tabler:maximize"
           variant="ghost"
-          class="text-white/40 hover:text-white hover:bg-white/10"
+          class="text-white/40 hover:text-white hover:bg-white/10 cursor-pointer"
           @click="enterFullscreen"
         />
       </div>
@@ -28,7 +28,7 @@
       target="_blank"
       icon="simple-icons:github"
       variant="ghost"
-      class="fixed bottom-4 right-4 text-white/30 hover:text-white/70 hover:bg-white/10"
+      class="fixed bottom-4 right-4 z-50 text-white/30 hover:text-white/70 hover:bg-white/10 cursor-pointer"
     />
   </div>
 </template>
