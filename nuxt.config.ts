@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   ssr: false,
+  experimental: {
+    viteEnvironmentApi: true,
+  },
   devtools: { enabled: true },
   vite: {
     optimizeDeps: {
@@ -19,6 +22,7 @@ export default defineNuxtConfig({
     apiHost: process.env.PLAUSIBLE_URL || '',
     domain: process.env.PLAUSIBLE_DOMAIN || '',
     autoOutboundTracking: true,
+    autoPageviews: false, // géré manuellement (middleware/analytics.global.ts)
   },
   css: ['~/assets/css/main.css'],
 })
