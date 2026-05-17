@@ -3,8 +3,6 @@
     class="min-h-screen w-full bg-[#ff0000] text-white flex items-center justify-center cursor-default overflow-y-auto sm:overflow-hidden"
     @click.self="onFirstClick"
   >
-    <!-- <CroissantFloating /> -->
-
     <div class="page-content max-w-3xl w-full px-6 py-10 sm:px-10 relative z-10">
       <CroissantHero />
       <CroissantMessage />
