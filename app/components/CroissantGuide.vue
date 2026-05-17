@@ -40,14 +40,14 @@
               size="sm"
               variant="subtle"
           /></span>
-          <span class="text-white/30">·</span>
+          <span class="text-white/30">・</span>
           <span class="flex items-center gap-1"
             >macOS <UKbd value="ctrl" size="sm" variant="subtle" />+<UKbd
               value="command"
               size="sm"
               variant="subtle" />+<UKbd value="Q" size="sm" variant="subtle"
           /></span>
-          <span class="text-white/30">·</span>
+          <span class="text-white/30">・</span>
           <span class="flex items-center gap-1"
             >Linux <UKbd value="super" size="sm" variant="subtle" />+<UKbd
               value="L"
