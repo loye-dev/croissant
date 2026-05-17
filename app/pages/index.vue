@@ -71,15 +71,23 @@ onMounted(() => {
   document.addEventListener('fullscreenchange', onFullscreenChange)
   document.addEventListener('keydown', onKeydown)
 
-  const url = new URL(window.location.href)
-  let cleaned = false
-  for (const key of [...url.searchParams.keys()]) {
-    if (key.startsWith('utm_')) {
-      url.searchParams.delete(key)
-      cleaned = true
+  const cleanUtm = () => {
+    const url = new URL(window.location.href)
+    let cleaned = false
+    for (const key of [...url.searchParams.keys()]) {
+      if (key.startsWith('utm_')) {
+        url.searchParams.delete(key)
+        cleaned = true
+      }
     }
+    if (cleaned) history.replaceState({}, '', url)
   }
-  if (cleaned) history.replaceState({}, '', url)
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(cleanUtm)
+  } else {
+    setTimeout(cleanUtm, 0)
+  }
 })
 
 onUnmounted(() => {
