@@ -32,7 +32,7 @@
             </ULink>
           </li>
         </ul>
-        <p class="flex items-center gap-2 flex-wrap text-xs text-white/50 mt-1">
+        <p class="flex items-center gap-2 flex-wrap text-xs text-white/70 mt-1">
           <span>Rappel :</span>
           <span class="flex items-center gap-1">
             Windows <UKbd value="win" size="sm" variant="subtle" />+<UKbd
