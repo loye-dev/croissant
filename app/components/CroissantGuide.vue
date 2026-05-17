@@ -1,6 +1,11 @@
 <template>
   <div class="mb-8">
-    <USeparator icon="lucide:croissant" size="sm" class="mb-8 sm:hidden" :ui="{ icon: 'text-white/30' }" />
+    <USeparator
+      icon="lucide:croissant"
+      size="sm"
+      class="mb-8 sm:hidden"
+      :ui="{ icon: 'text-white/30' }"
+    />
     <USeparator size="sm" class="mb-8 hidden sm:flex" />
     <div class="flex items-start gap-5 flex-col sm:flex-row">
       <div

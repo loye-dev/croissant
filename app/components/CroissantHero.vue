@@ -5,9 +5,7 @@
       <span class="glitch-layer" :style="bottomStyle">:(</span>
       <span class="sad-base relative" :style="baseStyle">:(</span>
     </div>
-    <h1 class="text-2xl font-light leading-snug sm:text-3xl">
-      Vous avez été croissanté !
-    </h1>
+    <h1 class="text-2xl font-light leading-snug sm:text-3xl">Vous avez été croissanté !</h1>
   </div>
 </template>
 
@@ -71,10 +69,20 @@ onUnmounted(() => clearTimeout(timeoutId))
 }
 
 @keyframes sadIdle {
-  0%, 93%, 100% { transform: none; }
-  94% { transform: translateX(-2px); }
-  96% { transform: translateX(2px); }
-  98% { transform: translateX(-1px); }
+  0%,
+  93%,
+  100% {
+    transform: none;
+  }
+  94% {
+    transform: translateX(-2px);
+  }
+  96% {
+    transform: translateX(2px);
+  }
+  98% {
+    transform: translateX(-1px);
+  }
 }
 
 .glitch-layer {

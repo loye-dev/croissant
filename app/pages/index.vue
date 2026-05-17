@@ -79,7 +79,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-
 .page-content {
   animation: pageEnter 0.8s ease-out;
 }
