@@ -12,13 +12,15 @@
     </div>
 
     <Transition name="fade">
-      <UButton
-        v-if="!isFullscreen"
-        icon="tabler:maximize"
-        variant="ghost"
-        class="fixed top-4 right-4 text-white/40 hover:text-white hover:bg-white/10"
-        @click="enterFullscreen"
-      />
+      <div v-if="!isFullscreen" class="fixed top-4 right-4 flex items-center gap-1">
+        <CroissantShare />
+        <UButton
+          icon="tabler:maximize"
+          variant="ghost"
+          class="text-white/40 hover:text-white hover:bg-white/10"
+          @click="enterFullscreen"
+        />
+      </div>
     </Transition>
 
     <UButton
