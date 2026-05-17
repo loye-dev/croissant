@@ -4,7 +4,7 @@
       icon="lucide:croissant"
       size="sm"
       class="mb-8 sm:hidden"
-      :ui="{ icon: 'text-white/30' }"
+      :ui="{ icon: 'text-white/80 animate-pulse' }"
     />
     <USeparator size="sm" class="mb-8 hidden sm:flex" />
     <div class="flex items-start gap-5 flex-col sm:flex-row">
