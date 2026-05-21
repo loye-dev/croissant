@@ -1,18 +1,20 @@
-const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
+const UTM_PARAMS = [
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_term',
+  'utm_content',
+  'fbclid',
+  'gclid',
+]
 
-export default defineNuxtPlugin(() => {
-  const route = useRoute()
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.hook('app:mounted', () => {
+    const url = new URL(window.location.href)
+    const hasUtm = UTM_PARAMS.some((param) => url.searchParams.has(param))
+    if (!hasUtm) return
 
-  const hasUtm = UTM_PARAMS.some((param) => param in route.query)
-  if (!hasUtm) return
-
-  const query = Object.fromEntries(
-    Object.entries(route.query).filter(([key]) => !UTM_PARAMS.includes(key)),
-  )
-  const cleanUrl =
-    route.path +
-    (Object.keys(query).length
-      ? '?' + new URLSearchParams(query as Record<string, string>).toString()
-      : '')
-  window.history.replaceState(window.history.state, '', cleanUrl)
+    UTM_PARAMS.forEach((param) => url.searchParams.delete(param))
+    window.history.replaceState(window.history.state, '', url.toString())
+  })
 })
