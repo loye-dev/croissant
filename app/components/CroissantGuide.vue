@@ -7,14 +7,14 @@
       :ui="{ icon: 'text-white/80 animate-pulse' }"
     />
     <USeparator size="sm" class="mb-8 hidden sm:flex" />
-    <div class="flex items-start gap-5 flex-col sm:flex-row">
+    <div class="flex flex-col items-start gap-5 sm:flex-row">
       <div
-        class="hidden sm:flex w-24 h-24 shrink-0 bg-white rounded items-center justify-center"
+        class="hidden h-24 w-24 shrink-0 items-center justify-center rounded bg-white sm:flex"
         aria-hidden="true"
       >
         <UIcon name="lucide:croissant" class="croissant-bounce size-12 text-[#ff0000]" />
       </div>
-      <div class="text-sm leading-relaxed text-white/70 space-y-3">
+      <div class="space-y-3 text-sm leading-relaxed text-white/70">
         <p>Pour vous cyber-éduquer et éviter que cela ne se reproduise :</p>
         <ul class="space-y-1.5">
           <li>
@@ -38,28 +38,30 @@
             </ULink>
           </li>
         </ul>
-        <p class="flex items-center gap-2 flex-wrap text-xs text-white/70 mt-1">
+        <p class="mt-1 flex flex-wrap items-center gap-2 text-xs text-white/70">
           <span>Rappel :</span>
           <span class="flex items-center gap-1">
-            Windows <UKbd value="win" size="sm" variant="subtle" />+<UKbd
-              value="L"
-              size="sm"
-              variant="subtle"
-          /></span>
+            Windows
+            <UKbd value="win" size="sm" variant="subtle" />
+            +
+            <UKbd value="L" size="sm" variant="subtle" />
+          </span>
           <span class="text-white/30">・</span>
-          <span class="flex items-center gap-1"
-            >macOS <UKbd value="ctrl" size="sm" variant="subtle" />+<UKbd
-              value="command"
-              size="sm"
-              variant="subtle" />+<UKbd value="Q" size="sm" variant="subtle"
-          /></span>
+          <span class="flex items-center gap-1">
+            macOS
+            <UKbd value="ctrl" size="sm" variant="subtle" />
+            +
+            <UKbd value="command" size="sm" variant="subtle" />
+            +
+            <UKbd value="Q" size="sm" variant="subtle" />
+          </span>
           <span class="text-white/30">・</span>
-          <span class="flex items-center gap-1"
-            >Linux <UKbd value="super" size="sm" variant="subtle" />+<UKbd
-              value="L"
-              size="sm"
-              variant="subtle"
-          /></span>
+          <span class="flex items-center gap-1">
+            Linux
+            <UKbd value="super" size="sm" variant="subtle" />
+            +
+            <UKbd value="L" size="sm" variant="subtle" />
+          </span>
         </p>
       </div>
     </div>
@@ -67,19 +69,19 @@
 </template>
 
 <style>
-.croissant-bounce {
-  animation: bounce 2s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
-}
+  .croissant-bounce {
+    animation: bounce 2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(-10deg);
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(-10deg);
+    }
+    50% {
+      transform: translateY(0px) rotate(10deg);
+    }
   }
-  50% {
-    transform: translateY(0px) rotate(10deg);
-  }
-}
 </style>
